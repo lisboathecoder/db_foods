@@ -8,14 +8,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model comida {
-  id Int @id @default(autoincrement())
-  nome String
-  tipo String
-  preco Float
+model comidas {
+  id        Int      @id @default(autoincrement())
+  nome      String
+  tipo      String
+  preco     Float
   descricao String
   createdAt DateTime @default(now())
-  updateAt DateTime @updatedAt
+  updateAt  DateTime @updatedAt
 
   @@map("comidas")
 }
